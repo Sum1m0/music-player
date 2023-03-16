@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+
+}
+
+/* 滚动槽
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset006px rgba(234, 16, 16, 0.3);
+    border-radius: 10px;
+    background: #bf3c3c;
+  } */
+
+  
+#music{
+    width: 1000px;
+    height: 580px;
+    margin: 100px auto;
+    background-image: url('../img/背景.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    box-shadow: 1px 1px 40px, -1px -1px 40px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+
+
+.main{
+    width: 1000px;
+    height: 460px;
+}
+
+footer{
+    width: 1000px;
+    height: 50px;
+    /* background-color: aquamarine; */
+}
+/* 中间三部分 */
+.left{
+    height: 460px;
+    width: 200px;
+    float: left;
+}
+.center{
+    height: 460px;
+    width: 600px;
+    float: left;
+}
+.right{
+    height: 460px;
+    width: 200px;
+    float: left;
+    background-color: rgba(255,255,255,0.4);
+}
+
+/* 左侧列表 */
+.left ul{
+    list-style: none;
+    /* background-color: aquamarine; */
+    font-size: 15px;
+    line-height: 30px;
+    height: 460px;
+    /* background-color: chartreuse; */
+    overflow-y: scroll;
+
+}
+
+.left ul li{
+    width: 153px;
+    margin: 0 auto;
+    padding: 6px 15px;
+}
+
+.left ul li:nth-child(odd){
+	background: rgba(255,255,255,0.4);
+}
+
+.left ul li:nth-child(2n){
+	background: rgba(140, 140, 140, 0.5);
+}
+
+/* 中间图片 */
+.pic{
+    height: 461px;
+    width: 600px;
+    /* opacity: 0.6; */
+}
+/* 右侧列表 */
+h2{
+    padding: 5px;
+    height: 30px;
+    color: #594e4e;
+}
+.right ul{
+    list-style: none;
+    padding: 10px;
+    height: 400px;
+    overflow-y: scroll;
+    background-color: rgba(255,255,255,0.4);
+}
+.right ul li{
+    /* background-color: yellowgreen; */
+    margin-bottom: 5px;
+    padding: 10px 0px;
+    border-bottom: 0.1px solid #a89696;
+}
+.con{
+    font-size: 0.8em;
+}
+/* header部分 */
+.mp{
+    float: left;
+    font-size: 25px;
+    margin: 18px 20px;
+    position: relative;
+}
+.searchzip{
+    height: 40px;
+    width: 300px;
+    float: right;
+    padding-top: 18px;
+}
+.search{
+    width: 180px;
+    height: 34px;
+    background-color: rgb(70, 124, 125);
+    float: left;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+}
+.button{
+    float: left;
+    width: 55px;
+    height: 34px;
+}
+header{
+    width: 1000px;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* opacity: 0.3; */
+}
+
+/* 下方播放 */
+.music{
+    width: 1000px;
+    height: 50px;
+    outline: none;
+    background-color: #161616;
+    border-radius: 0 0 4px 4px;
+    display: inline-block;
+}
+
+
+.cover{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    float: left;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.cover video{
+    position: fixed;
+    margin-top: 100px;
+    width: 800px;
+    height: 546px;
+    left: 300px;
+}

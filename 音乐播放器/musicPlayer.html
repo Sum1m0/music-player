@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>music player</title>
+    <link rel="stylesheet" href="./css/sty.css">
+</head>
+<body>
+    <div id="music">
+        <!-- //头部搜索框 -->
+        <header>
+            <div class="mp">music player</div>
+            <div class="searchzip">
+                <input type="text" placeholder="输入音乐名" class="search" v-model="query" @keyup.enter="keyenter">
+                <button class="button" @click="keyenter">搜索</button>
+            </div>
+        </header>
+        <!-- 中间三部分 -->
+        <div class="main">
+            <div class="left">
+                <ul > 
+                    <li v-for="item in musiclist">
+                        <a href="javascript:;" @click="playMusic(item.id)"><img src="./img/播放.png" alt=""></a>
+                        <span>{{item.name}}</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="center">
+                <img :src="picUrl" alt="" class="pic">
+            </div>
+            <div class="right">
+                <h2>评论</h2>
+                <ul>
+                    <li v-for="item in hotComments">
+                        <strong>{{item.user.nickname}}</strong></br>
+                        <span class="con">{{item.content}}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 音乐播放的轴 -->
+        <footer>
+            <audio  :src="musicUrl" controls="controls" autoplay="" loop="" ref="audio" class="music"></audio>
+        </footer>
+        <!-- <div class="cover" v-if="cover" @click="close">
+            <video ref='video' src="" controls :src="mvUrl" autoplay="" ></video>
+        </div> -->
+    </div>
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./js/js.js"></script>
+</body>
+</html>
